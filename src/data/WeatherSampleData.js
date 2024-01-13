@@ -1,0 +1,28 @@
+const weatherSampleData = [
+  { temperature: 25, type: "Sunny", time: "Now" },
+  { temperature: 24, type: "Lightning", time: "01:00" },
+  { temperature: 23, type: "Rain Sunny", time: "02:00" },
+  { temperature: 22, type: "Cloudy Snow", time: "03:00" },
+  { temperature: 21, type: "Cloudy Sunny", time: "04:00" },
+  { temperature: 20, type: "Cloudy", time: "05:00" },
+  { temperature: 19, type: "Rain", time: "06:00" },
+  { temperature: 18, type: "Sunny", time: "07:00" },
+  { temperature: 17, type: "Lightning", time: "08:00" },
+  { temperature: 16, type: "Rain Sunny", time: "09:00" },
+  { temperature: 15, type: "Cloudy Snow", time: "10:00" },
+  { temperature: 14, type: "Cloudy Sunny", time: "11:00" },
+  { temperature: 13, type: "Cloudy", time: "12:00" },
+  { temperature: 12, type: "Rain", time: "13:00" },
+  { temperature: 11, type: "Sunny", time: "14:00" },
+  { temperature: 10, type: "Lightning", time: "15:00" },
+  { temperature: 9, type: "Rain Sunny", time: "16:00" },
+  { temperature: 8, type: "Cloudy Snow", time: "17:00" },
+  { temperature: 7, type: "Cloudy Sunny", time: "18:00" },
+  { temperature: 6, type: "Cloudy", time: "19:00" },
+  { temperature: 5, type: "Rain", time: "20:00" },
+  { temperature: 4, type: "Sunny", time: "21:00" },
+  { temperature: 3, type: "Lightning", time: "22:00" },
+  { temperature: 2, type: "Rain Sunny", time: "23:00" },
+];
+
+export default weatherSampleData;
