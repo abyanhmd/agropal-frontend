@@ -10,16 +10,16 @@ function TopPanel(props) {
       <div
         className={`w-full flex flex-row justify-between pt-4 px-8 text-primary`}
       >
-        <h1 className=" font-medium font-albert text-lg">{props.page}</h1>
+        <h1 className="text-lg font-medium font-albert">{props.page}</h1>
         <div className="flex">
-          <HiOutlineBell className="my-auto mx-4 w-6 h-6" />
+          <HiOutlineBell className="w-6 h-6 mx-4 my-auto" />
           <HiOutlineSun
-            className="my-auto mx-4 w-6 h-6 cursor-pointer"
+            className="w-6 h-6 mx-4 my-auto cursor-pointer"
             onClick={switchTheme}
           />
         </div>
       </div>
-      <div className="border-b border-2 my-4 border-sidePanel"></div>
+      <div className="my-4 border-2 border-b border-sidePanel"></div>
     </>
   );
 }

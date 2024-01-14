@@ -7,6 +7,7 @@ import {
   HiOutlineViewGrid,
   HiOutlineViewList,
 } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 function TopMenuInventory(props) {
   const handleItemClick = (viewType) => {
@@ -62,10 +63,13 @@ function TopMenuInventory(props) {
         </div>
       </div>
 
-      <div className="right-0 flex px-6 rounded-lg bg-button text-buttonText">
+      <Link
+        to="create"
+        className="right-0 flex px-6 duration-150 rounded-lg bg-button hover:bg-buttonHover text-buttonText"
+      >
         <HiOutlinePlus className="my-auto me-3" />
         <p className="my-auto">Add Item</p>
-      </div>
+      </Link>
     </section>
   );
 }

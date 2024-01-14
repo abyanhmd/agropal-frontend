@@ -1,5 +1,5 @@
 import useLocalStorage from "use-local-storage";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
 const useTheme = () => {
   const [theme, setTheme] = useLocalStorage("theme", "light");
@@ -13,12 +13,15 @@ const useTheme = () => {
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme, setTheme]);
 
-  const switchTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-  };
+  const switchTheme = useMemo(
+    () => () => {
+      const newTheme = theme === "dark" ? "light" : "dark";
+      setTheme(newTheme);
+    },
+    [theme, setTheme],
+  );
 
-  return { switchTheme };
+  return { theme, switchTheme };
 };
 
 export default useTheme;

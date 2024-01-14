@@ -11,6 +11,7 @@ export default {
       secondary: "rgb(var(--color-secondary) / <alpha-value>)",
       accent: "rgb(var(--color-accent) / <alpha-value>)",
       button: "rgb(var(--color-button) / <alpha-value>)",
+      buttonHover: "rgb(var(--color-buttonHover) / <alpha-value>)",
       buttonText: "rgb(var(--color-buttonText) / <alpha-value>)",
       sidePanel: "rgb(var(--color-sidePanel) / <alpha-value>)",
       sidePanelHover: "rgb(var(--color-sidePanelHover) / <alpha-value>)",

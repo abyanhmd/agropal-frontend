@@ -1,7 +1,7 @@
-import authenticationBackground from "../../assets/authBackground.png";
-import TextForm from "../../components/form/TextForm.jsx";
+import authenticationBackground from "@assets/authBackground.png";
 import { HiOutlineMail } from "react-icons/hi";
-import PasswordForm from "../../components/form/PasswordForm.jsx";
+import TextForm from "@components/form/TextForm.jsx";
+import PasswordForm from "@components/form/PasswordForm.jsx";
 import { useEffect } from "react";
 
 function Login() {
@@ -12,12 +12,12 @@ function Login() {
   return (
     <section className="grid grid-cols-2 bg-background">
       {/*Left Grid (Form) */}
-      <div className="m-auto inline h-fit w-1/2">
-        <h1 className="mb-6 w-fit text-4xl font-bold font-albert text-primary">
+      <div className="inline w-1/2 m-auto h-fit">
+        <h1 className="mb-6 text-4xl font-bold w-fit font-albert text-primary">
           Log in
         </h1>
-        <div className="flex w-fit align-middle">
-          <p className="text-lg font-medium text-secondary me-3 text-secondary">
+        <div className="flex align-middle w-fit">
+          <p className="text-lg font-medium text-secondary me-3">
             Don&apos;t have a Member?
           </p>
           <a href="/register" className="text-lg font-medium text-accent">
@@ -37,13 +37,13 @@ function Login() {
           <PasswordForm id="password" placeholder="Password" />
         </div>
 
-        <div className="mt-4 w-full text-right">
+        <div className="w-full mt-4 text-right">
           <a href="/" className="text-lg font-medium text-secondary">
             Forget Password?
           </a>
         </div>
 
-        <button className="mt-24 w-full rounded-full py-4 text-lg font-semibold text-buttonText bg-button font-albert">
+        <button className="w-full py-4 mt-24 text-lg font-semibold rounded-full text-buttonText bg-button font-albert">
           Log in
         </button>
       </div>
@@ -52,7 +52,7 @@ function Login() {
       <div>
         <img
           src={authenticationBackground}
-          className="h-screen w-full select-none object-cover"
+          className="object-cover w-full h-screen select-none"
         />
       </div>
     </section>

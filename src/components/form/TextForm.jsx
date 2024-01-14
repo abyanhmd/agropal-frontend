@@ -13,6 +13,7 @@ function TextForm(props) {
         className={`px-[28px] bg-transparent py-4 text-lg rounded-lg w-full font-medium text-primary border-2 border-secondary transform ${
           isFocused ? "pt-6 pb-2" : ""
         }`}
+        autoComplete="off"
         onFocus={() => setIsFocused(true)}
         onBlur={(e) => setIsFocused(e.target.value !== "")}
       />
@@ -27,10 +28,14 @@ function TextForm(props) {
         {props.placeholder}
       </label>
 
-      <props.icon
-        className={`absolute w-6 h-6 text-secondary inset-y-0 m-auto right-0 me-6`}
-        placeholder={props.placeholder}
-      />
+      {props.icon !== undefined ? (
+        <props.icon
+          className={`absolute w-6 h-6 text-secondary inset-y-0 m-auto right-0 me-6`}
+          placeholder={props.placeholder}
+        />
+      ) : (
+        ""
+      )}
     </div>
   );
 }
@@ -39,7 +44,7 @@ TextForm.propTypes = {
   id: PropTypes.string.isRequired,
   inputType: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
-  icon: PropTypes.elementType.isRequired,
+  icon: PropTypes.elementType,
 };
 
 export default TextForm;
