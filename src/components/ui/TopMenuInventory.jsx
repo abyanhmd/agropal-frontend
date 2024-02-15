@@ -1,9 +1,7 @@
 import PropTypes from "prop-types";
 import {
-  HiOutlineFilter,
   HiOutlinePlus,
   HiOutlineSearch,
-  HiOutlineSortDescending,
   HiOutlineViewGrid,
   HiOutlineViewList,
 } from "react-icons/hi";
@@ -17,7 +15,7 @@ function TopMenuInventory(props) {
   return (
     <section className="flex flex-row justify-between pb-4 mx-[28px] font-medium">
       <div className="flex w-1/2">
-        <div className="flex p-1 border-2 rounded-lg w-fit border-primary me-4">
+        <div className="flex p-1 border-2 rounded-lg w-fit border-border me-4">
           <div
             className={`flex px-3 py-1 align-middle rounded-md  ${
               props.viewType === "ListView"
@@ -42,7 +40,7 @@ function TopMenuInventory(props) {
           </div>
         </div>
 
-        <div className="flex px-3 border-2 rounded-lg w-fit border-primary me-4">
+        {/* <div className="flex px-3 border-2 rounded-lg w-fit border-primary me-4">
           <HiOutlineFilter className="w-5 h-5 m-auto me-2 text-primary" />
           <p className="m-auto text-medium text-primary text-md">Filter</p>
         </div>
@@ -50,7 +48,7 @@ function TopMenuInventory(props) {
         <div className="flex px-3 border-2 rounded-lg w-fit border-primary me-4">
           <HiOutlineSortDescending className="w-5 h-5 m-auto me-2 text-primary" />
           <p className="m-auto text-medium text-primary text-md">Sort</p>
-        </div>
+        </div> */}
 
         <div className="relative flex justify-start w-2/3 rounded-lg text-primary">
           <HiOutlineSearch className="absolute inset-y-0 my-auto w-5 h-5 ms-3.5 pointer-events-none" />
@@ -58,14 +56,14 @@ function TopMenuInventory(props) {
           <input
             type="text"
             placeholder="Search"
-            className="w-full bg-transparent border-2 rounded-lg border-primary ps-12 "
+            className="w-full bg-transparent border-2 rounded-lg border-border ps-12 "
           />
         </div>
       </div>
 
       <Link
         to="create"
-        className="right-0 flex px-6 duration-150 rounded-lg bg-button hover:bg-buttonHover text-buttonText"
+        className="right-0 flex px-6 duration-200 rounded-lg bg-button hover:bg-buttonHover text-buttonText"
       >
         <HiOutlinePlus className="my-auto me-3" />
         <p className="my-auto">Add Item</p>

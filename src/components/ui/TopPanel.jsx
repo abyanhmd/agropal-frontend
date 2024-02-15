@@ -5,12 +5,22 @@ import useTheme from "../../hooks/useTheme.js";
 function TopPanel(props) {
   const { switchTheme } = useTheme();
 
+  const pageName = [
+    "Dashboard",
+    "Inventory Management",
+    "Financial Analytics",
+    "Weather",
+    "Settings",
+  ];
+
   return (
     <>
       <div
         className={`w-full flex flex-row justify-between pt-4 px-8 text-primary`}
       >
-        <h1 className="text-lg font-medium font-albert">{props.page}</h1>
+        <h1 className="text-lg font-medium font-albert">
+          {pageName.includes(props.page) ? props.page : "Account"}
+        </h1>
         <div className="flex">
           <HiOutlineBell className="w-6 h-6 mx-4 my-auto" />
           <HiOutlineSun

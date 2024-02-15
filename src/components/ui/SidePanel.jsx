@@ -63,12 +63,12 @@ function SidePanel({ pageName, username, onItemClick }) {
   const bottomItems = [
     {
       label: "Settings",
-      icon: <HiOutlineCog className="w-6 h-6 mx-4 my-auto" />,
+      icon: <HiOutlineCog className="w-6 h-6 mx-4" />,
       route: "/settings",
     },
     {
       label: username,
-      icon: <HiOutlineUserCircle className="w-6 h-6 mx-4 my-auto" />,
+      icon: <HiOutlineUserCircle className="w-6 h-6 mx-4" />,
       route: "/account",
     },
   ];

@@ -9,8 +9,11 @@ import Weather from "@pages/Home/Weather/Weather.jsx";
 import AddProduct from "@pages/Home/Inventory/AddProduct.jsx";
 import AddLocation from "@pages/Home/Weather/AddLocation";
 import Financial from "@pages/Home/Financial";
-import Settings from "./pages/Home/Settings/Settings";
-import Account from "./pages/Home/Account/Account";
+import Settings from "@pages/Home/Settings/Settings";
+import Account from "@pages/Home/Account/Account";
+import ForgetPassword from "@pages/Authentication/ForgetPassword";
+import ForgetPasswordConfirmation from "@pages/Authentication/ForgetPasswordConfirmation";
+import Docs from "@pages/Docs/Docs";
 
 function App() {
   return (
@@ -28,6 +31,12 @@ function App() {
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/forget-password" element={<ForgetPassword />} />
+        <Route
+          path="/forget-password-confirmation"
+          element={<ForgetPasswordConfirmation />}
+        />
+        <Route path="/api/docs" element={<Docs />} />
       </Routes>
     </>
   );

@@ -1,0 +1,207 @@
+[
+  {
+    "method": "POST",
+    "endpoint": "/account/register",
+    "description": "Create a new account",
+    "authorization": null,
+    "request": {
+      "fullName": "John Doe",
+      "birthDate": "1990-05-15",
+      "email": "john.doe@example.com",
+      "password": "john.doe",
+      "phone": "+1 (123) 456-7890",
+      "gender": "Male",
+      "avatar": "https://example.com/avatar.jpg",
+      "role": "User"
+    },
+    "response": {
+      "token": "<Generated Token>"
+    }
+  },
+  {
+    "method": "POST",
+    "endpoint": "/account/login",
+    "description": "Login an account",
+    "authorization": null,
+    "request": {
+      "email": "john.doe@example.com",
+      "password": "john.doe"
+    },
+    "response": {
+      "token": "<Generated Token>"
+    }
+  },
+  {
+    "method": "GET",
+    "endpoint": "/account",
+    "description": "Get account information",
+    "authorization": "Authorization: Bearer <token>",
+    "request": null,
+    "response": {
+      "userId": "<User ID>",
+      "fullName": "John Doe",
+      "birthDate": "1990-05-15",
+      "email": "john.doe@example.com",
+      "password": "john.doe",
+      "phone": "+1 (123) 456-7890",
+      "gender": "Male",
+      "avatar": "https://example.com/avatar.jpg",
+      "role": "User"
+    }
+  },
+  {
+    "method": "PUT",
+    "endpoint": "/account",
+    "description": "Edit account information",
+    "authorization": "Authorization: Bearer <token>",
+    "request": {
+      "fullName": "John Doe",
+      "birthDate": "1990-05-15",
+      "email": "john.doe@example.com",
+      "password": "john.doe",
+      "phone": "+1 (123) 456-7890",
+      "gender": "Male",
+      "avatar": "https://example.com/avatar.jpg",
+      "role": "User"
+    },
+    "response": {
+      "code": 200,
+      "status": "success",
+      "message": "User has been updated successfully."
+    }
+  },
+  {
+    "method": "POST",
+    "endpoint": "/account/logout",
+    "description": "Logout account",
+    "authorization": "Authorization: Bearer <token>",
+    "request": null,
+    "response": {
+      "code": 200,
+      "status": "success",
+      "message": "User has been logged out."
+    }
+  },
+  {
+    "method": "POST",
+    "endpoint": "/product",
+    "description": "Create a new Product",
+    "authorization": "Authorization: Bearer <token>",
+    "request": {
+      "name": "Wheat",
+      "description": "Wheat product description",
+      "quantityStock": "120",
+      "quantitySold": "90",
+      "image": "https://example.com/wheat.jpg"
+    },
+    "response": {
+      "code": 201,
+      "status": "success",
+      "message": "Product has been created successfully."
+    }
+  },
+  {
+    "method": "GET",
+    "endpoint": "/product",
+    "description": "Get list of Products",
+    "authorization": "Authorization: Bearer <token>",
+    "request": null,
+    "response": [
+      {
+        "productId": "<Product ID>",
+        "name": "Wheat",
+        "description": "Wheat product description",
+        "quantityStock": "120",
+        "quantitySold": "90",
+        "image": "https://example.com/wheat.jpg",
+        "userId": "<User ID>"
+      }
+    ]
+  },
+  {
+    "method": "PUT",
+    "endpoint": "/product",
+    "description": "Edit a Product",
+    "authorization": "Authorization: Bearer <token>",
+    "request": {
+      "name": "Wheat",
+      "description": "Wheat product description",
+      "quantityStock": "120",
+      "quantitySold": "90",
+      "image": "https://example.com/wheat.jpg"
+    },
+    "response": {
+      "code": 200,
+      "status": "success",
+      "message": "Product has been updated successfully."
+    }
+  },
+  {
+    "method": "DELETE",
+    "endpoint": "/product",
+    "description": "Delete a Product",
+    "authorization": "Authorization: Bearer <token>",
+    "request": {
+      "productId": "<Product ID>"
+    },
+    "response": {
+      "code": 200,
+      "status": "success",
+      "message": "Product has been deleted successfully."
+    }
+  },
+  {
+    "method": "POST",
+    "endpoint": "/weather",
+    "description": "Add a new Location for Weather Information",
+    "authorization": "Authorization: Bearer <token>",
+    "request": {
+      "location": "Tomsk, Russia"
+    },
+    "response": {
+      "code": 201,
+      "status": "success",
+      "message": "Location for weather has been created successfully."
+    }
+  },
+  {
+    "method": "GET",
+    "endpoint": "/weather",
+    "description": "Get Location for Weather Information",
+    "authorization": "Authorization: Bearer <token>",
+    "request": null,
+    "response": {
+      "weatherId": "<Weather ID>",
+      "location": "<Location>",
+      "userId": "<User ID>"
+    }
+  },
+  {
+    "method": "PUT",
+    "endpoint": "/weather",
+    "description": "Edit Location for Weather Information",
+    "authorization": "Authorization: Bearer <token>",
+    "request": {
+      "location": "<Location>"
+    },
+    "response": {
+      "code": 200,
+      "status": "success",
+      "message": "Location has been updated successfully."
+    }
+  },
+  {
+    "method": "DELETE",
+    "endpoint": "/weather",
+    "description": "Delete Location for Weather Information",
+    "authorization": "Authorization: Bearer <token>",
+    "request": {
+      "weatherId": "<Weather ID>"
+    },
+    "response": {
+      "code": 200,
+      "status": "success",
+      "message": "Location has been deleted successfully."
+    }
+  }
+]

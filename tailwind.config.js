@@ -16,6 +16,7 @@ export default {
       sidePanel: "rgb(var(--color-sidePanel) / <alpha-value>)",
       sidePanelHover: "rgb(var(--color-sidePanelHover) / <alpha-value>)",
       border: "rgb(var(--color-border) / <alpha-value>)",
+      warning: "rgb(var(--color-warning) / <alpha-value>)",
     },
     fontFamily: {
       albert: ["Albert Sans", "sans-serif"],

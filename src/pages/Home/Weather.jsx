@@ -65,7 +65,7 @@ function Weather() {
           <HiOutlineLocationMarker className="w-4 h-4 my-auto font-semibold text-primary me-2" />
           <p className="text-base font-semibold text-primary">Tomsk, Russia</p>
         </div>
-        <div className="flex px-4 rounded-lg cursor-pointer bg-button">
+        <div className="flex px-4 duration-200 transform rounded-lg cursor-pointer bg-button hover:bg-buttonHover">
           <HiOutlinePlusSm className="my-auto me-2 text-buttonText" />
           <p className="my-auto text-buttonText">Add Location</p>
         </div>

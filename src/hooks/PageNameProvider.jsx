@@ -1,10 +1,11 @@
+import useLocalStorage from "use-local-storage";
 import PropTypes from "prop-types";
-import { createContext, useState } from "react";
+import { createContext } from "react";
 
 export const PageNameContext = createContext();
 
 export const PageNameProvider = ({ children }) => {
-  const [pageName, setPageName] = useState("Dashboard");
+  const [pageName, setPageName] = useLocalStorage("pageName", "");
 
   const changePageName = (newPageName) => {
     setPageName(newPageName);

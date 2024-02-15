@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { DataGrid } from "@mui/x-data-grid";
 import inventorySampleData from "@data/InventorySampleData.js";
 import weatherSampleData from "@data/WeatherSampleData.js";
@@ -121,11 +120,5 @@ function Dashboard() {
     </div>
   );
 }
-
-Dashboard.propTypes = {
-  pageName: PropTypes.string.isRequired,
-  username: PropTypes.string.isRequired,
-  onItemClick: PropTypes.func.isRequired,
-};
 
 export default Dashboard;
